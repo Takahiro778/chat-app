@@ -1,5 +1,9 @@
 class RoomsController < ApplicationController
-
+  before_action :authenticate_user!  # ← ここに追加
+  def new
+    @room = Room.new
+  end
+  
   def index
   end
 
